@@ -1,9 +1,8 @@
-/* 
- * A développer 
- * Utilisatoin du bargraphe
- * encadrement des niveaux
- */
-/* 
+/* Station de mesure de la qualité de l'air 
+ *  
+ *  Auteur : Frédéric MUHLACH - 01/07/2017
+ *  
+ * PLAGE DE MESURE DES CAPTEURS 
  * Carbon monoxide CO 1 – 1000ppm
  * Nitrogen dioxide NO2 0.05 – 10ppm
  * Ethanol C2H6OH 10 – 500ppm
@@ -32,16 +31,34 @@
  *               30        77                  110
  *               60        56                  80
  * 
- *      
+ *  VERSIONNING     
  *      Version 0.1
  *      Version 0.2 : si bouton PRECEDENT + SUIVANT SONT APPUYES AU DEMARRAGE -> LANCEMENT DES OPERATIONS DE CALIBRATION DES CAPTEURS
  *      Version 0.3 : Fonction de prechauffage
  *      Version 0.4 : passage Arduino Mega
- *      Version 0.5 Debug DHT11 / arduino MEGA
+ *      Version 0.5 :  Debug DHT11 / arduino MEGA
  *      
  *      A faire : pilotage ventilateur et mise en route après prechauffage
  *      Enregistrement des données sur carte microsd
+ *
+ *  CONNEXIONS :
+ *    Bouton suivant     : numérique 6
+ *    Bouton précédent   : numérique 7
+ *    Bouton Record      : numérique 8
+ *    Led RECORD         : numérique 9
+ *    Capteur CO2        : série TX1 RX1 (18 et 19)
+ *    Capteur O2         : analogique A2 (A2)
+ *    Capteur HCHO       : analogique A1 (A1)
+ *    Capteur Multi gaz  : I2C SDA SDL (20 et 21)
+ *    Horloge RTC        : I2C
+ *    Ecran RGB          : I2C
+ *    Température et Hum : 2
+ *    Bargraphe          : (CLOCK - 5 et DATA - 4)
+ *    Moteur             : numérique 13
+ *    Carte SD           : MOSI - pin 51, MISO - pin 50, CLK - pin 52, CS - pin 10
+ *    
  */
+ 
 #define VERSION_MAJ 0
 #define VERSION_MIN 5
 
